@@ -1,0 +1,41 @@
+{
+  "rows": {
+    "train": 95521,
+    "val": 17890,
+    "test": 26588
+  },
+  "ensemble_weight_gb": 0.25,
+  "auc": {
+    "ensemble": 0.9463719109747958,
+    "gradient_boosting": 0.8886784946320692,
+    "char_ngram_logreg": 0.9441401065297039
+  },
+  "at_block_threshold": {
+    "threshold": 0.8107,
+    "accuracy": 0.8064916503685874,
+    "precision": 0.9906457061192673,
+    "recall": 0.6004882658686407,
+    "f1": 0.7477322873253248,
+    "false_positive_rate": 0.005183585313174946,
+    "tn": 13818,
+    "fp": 72,
+    "fn": 5073,
+    "tp": 7625
+  },
+  "at_suspicious_threshold": {
+    "threshold": 0.6355,
+    "accuracy": 0.8608770874078532,
+    "precision": 0.9588049352503314,
+    "recall": 0.740510316585289,
+    "f1": 0.8356365252166186,
+    "false_positive_rate": 0.029085673146148308,
+    "tn": 13486,
+    "fp": 404,
+    "fn": 3295,
+    "tp": 9403
+  },
+  "recall_by_source_at_block": {
+    "phishing": 0.649026512013256,
+    "hosts": 0.44641683103221563
+  }
+}

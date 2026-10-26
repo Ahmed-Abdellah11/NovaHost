@@ -1,0 +1,9 @@
+# Domains (and all their subdomains) that are NEVER blocked. One per line.
+sohag.edu.eg
+moe.gov.eg
+google.com
+microsoft.com
+cisco.com
+github.com
+wikipedia.org
+cloudflare.com

@@ -1,0 +1,6 @@
+# development / training (everything)
+-r requirements-runtime.txt
+pandas>=2.2
+matplotlib>=3.8
+pytest>=8
+httpx>=0.27

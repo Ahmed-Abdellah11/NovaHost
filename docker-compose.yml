@@ -1,0 +1,18 @@
+services:
+  nova:
+    build: .
+    image: nova-ai-dns:1.0
+    container_name: nova-ai-dns
+    ports:
+      - "53:53/udp"      # DNS   (use "5353:53/udp" if port 53 is taken, e.g. systemd-resolved)
+      - "53:53/tcp"
+      - "8000:8000"      # dashboard + REST API  ->  http://localhost:8000
+    environment:
+      UPSTREAM_DNS: 8.8.8.8
+      NOVA_API_KEY: change-me          # required for /allow and /deny
+    volumes:
+      - nova-data:/data                # decisions DB + blocklist survive restarts
+      - ./config:/app/config:ro        # edit allowlist.txt / denylist.txt on the host
+    restart: unless-stopped
+volumes:
+  nova-data:
